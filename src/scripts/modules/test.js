@@ -1,3 +1,3 @@
 export default function () {
-  console.log('test');
+  console.log('modules/test.js loaded');
 }

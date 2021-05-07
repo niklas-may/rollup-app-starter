@@ -23,7 +23,6 @@ export default {
     include: ['src/**'],
   },
   plugins: [
-    eslint(),
     replace({
       delimiters: ['{{', '}}'],
       version: version,
@@ -34,7 +33,7 @@ export default {
         { src: 'src/static/images', dest: 'dist/images' },
       ],
     }),
-    !isDev && terser(), // minify, but only in production
+    !isDev && terser(),
     isDev &&
       serve({
         open: true,
@@ -43,5 +42,6 @@ export default {
         historyApiFallback: '/index.html',
       }),
     isDev && livereload(),
+    isDev && eslint(),
   ],
 };

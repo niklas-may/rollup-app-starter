@@ -1,8 +1,4 @@
-import mzConsole from './modules/test';
+import test from './modules/test';
 
-console.log('version: {{version}}');
-console.log('fdfs');
-mzConsole();
-
-const peter = 'unused';
-console.log('peter', peter);
+console.log('Current version: {{version}}');
+test();
